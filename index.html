@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulik Makwana | Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">M. Makwana</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <select id="theme-toggle" style="margin-left: 1rem; padding: 0.3rem; border-radius: 4px;">
+                    <option value="light">Professional</option>
+                    <option value="dark">Dark</option>
+                    <option value="creative">Creative</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        toggle.value = savedTheme;
+
+        toggle.addEventListener('change', (e) => {
+            const theme = e.target.value;
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+
+    <header class="hero">
+        <div class="container" style="display: flex; align-items: center; gap: 4rem;">
+            <div class="hero-text">
+                <h1>Senior Software Engineer</h1>
+                <p>Specializing in robust backend systems, microservices architecture, and cloud solutions. 7+ years of
+                    delivering excellence.</p>
+                <a href="#contact" class="btn">Get in Touch</a>
+            </div>
+            <div class="hero-img">
+                <img src="images/profile_professional.png" alt="Maulik Makwana">
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                I am a Senior Software Engineer with a Bachelor’s in Computer Engineering and over 7 years of
+                experience.
+                I specialize in designing, testing, and maintaining complex web applications.
+                My expertise lies in Java, Spring Boot, and AWS services. I thrive in collaborative environments and
+                have a proven track record of leading teams to success.
+            </p>
+        </div>
+    </section>
+
+    <section id="experience" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Analyst</h3>
+                            <div class="company">ValueLabs</div>
+                        </div>
+                        <div class="date">April 2020 – Present</div>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Architected backend systems for processing user historical data using AWS Lambda.</li>
+                            <li>Optimized Java-based Lambda functions using GraalVM and AWS SnapStart.</li>
+                            <li>Mentored a team of 5 backend developers, ensuring code quality and best practices.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Senior Software Engineer</h3>
+                            <div class="company">ValueLabs</div>
+                        </div>
+                        <div class="date">Sep 2020 – Apr 2023</div>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Customized IBM Sterling Order Management System.</li>
+                            <li>Implemented Spring Boot Camunda 8 clients and Micronaut AWS Lambdas.</li>
+                            <li>Ensured system reliability through comprehensive JUnit and Mockito testing.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Associate Consultant</h3>
+                            <div class="company">Virtusa</div>
+                        </div>
+                        <div class="date">Aug 2019 - Sep 2020</div>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Led migration of legacy applications to Spring Cloud Microservices.</li>
+                            <li>Designed and implemented RESTful APIs for Angular frontends.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Backend Development</h4>
+                    <p>Java 11, Spring Boot, Microservices, REST APIs</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Cloud & DevOps</h4>
+                    <p>AWS (Lambda, S3, SQS, Kinesis), Docker, Kubernetes</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Database & Tools</h4>
+                    <p>Oracle, MySQL, Camunda 8, Git, SVN</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p style="margin-bottom: 2rem;">Open for opportunities and collaborations.</p>
+            <div class="footer-links">
+                <a href="mailto:m.maulik96@gmail.com">m.maulik96@gmail.com</a>
+                <a href="tel:+918758897829">+91 8758897829</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <p style="margin-top: 3rem; font-size: 0.9rem; opacity: 0.6;">&copy; 2025 Maulik Makwana. All rights
+                reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
